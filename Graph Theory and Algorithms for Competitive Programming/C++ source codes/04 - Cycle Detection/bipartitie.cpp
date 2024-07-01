@@ -1,7 +1,7 @@
 
 // Bipartite Graph 
 // - You can divide all vertices of graph in 2 sets such that all vertices of graphs are from set 1 to set 2
-// Bipartite if graph has a cycle or graph has odd number of nodes
+// Not Bipartite if graph has a cycle or graph has odd number of nodes
 
 
 #include<iostream>
@@ -33,7 +33,7 @@ bool dfs_helper(vector<int> graph[],int node,int *visited,int parent, int color)
 
 bool dfs(vector<int> graph[],int N){
 
-	int visited[N] = {0};  // 0- Not Visited, 1 - Visited Color is 1, 2 - Visted Color 2
+	int visited[N] = {0};  // 0- Not Visited, 1 - Visited and color is 1, 2 - Visted and color is 2
 
 	int color = 1;
 	int ans = dfs_helper(graph,0,visited,-1,color);
