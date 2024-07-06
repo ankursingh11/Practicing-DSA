@@ -13,7 +13,7 @@ public:
 		this->V = V;
 	}
 
-	int addEdge(int u,int v){
+	void addEdge(int u,int v){
 		l.push_back(make_pair(u,v));
 	}
 	// Find
